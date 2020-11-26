@@ -2,3 +2,23 @@
 2020-11-26 09:28:10,841 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted
 2020-11-26 09:39:28,367 INFO  monkeybusiness.training.task.main.Main [main] Test file logging
 2020-11-26 09:39:28,372 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted
+2020-11-26 10:31:21,745 INFO  monkeybusiness.training.task.main.Main [main] Test file logging
+2020-11-26 10:31:21,752 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted
+2020-11-26 10:31:21,759 ERROR monkeybusiness.training.task.reader.IntArrayDataReader [main] Exception was caused java.io.FileNotFoundException: data\Array.txt (The system cannot find the path specified)
+2020-11-26 10:33:10,606 INFO  monkeybusiness.training.task.main.Main [main] Test file logging
+2020-11-26 10:33:10,616 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted
+2020-11-26 10:33:10,624 ERROR monkeybusiness.training.task.reader.IntArrayDataReader [main] Exception was caused java.io.FileNotFoundException: data\Array.txt (The system cannot find the path specified)
+2020-11-26 10:33:59,394 INFO  monkeybusiness.training.task.main.Main [main] Test file logging
+2020-11-26 10:33:59,400 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted
+2020-11-26 10:33:59,407 ERROR monkeybusiness.training.task.reader.IntArrayDataReader [main] Exception was caused java.io.FileNotFoundException: \data\Array.txt (The system cannot find the path specified)
+2020-11-26 10:34:25,737 INFO  monkeybusiness.training.task.main.Main [main] Test file logging
+2020-11-26 10:34:25,743 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted
+2020-11-26 10:34:25,749 ERROR monkeybusiness.training.task.reader.IntArrayDataReader [main] Exception was caused java.io.FileNotFoundException: \data\Array.txt (The system cannot find the path specified)
+2020-11-26 10:35:58,659 INFO  monkeybusiness.training.task.main.Main [main] Test file logging
+2020-11-26 10:35:58,666 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted
+2020-11-26 10:35:58,671 ERROR monkeybusiness.training.task.reader.IntArrayDataReader [main] Exception was caused java.io.FileNotFoundException: ~\data\Array.txt (The system cannot find the path specified)
+2020-11-26 10:37:09,898 INFO  monkeybusiness.training.task.main.Main [main] Test file logging
+2020-11-26 10:37:09,904 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted
+2020-11-26 10:37:09,910 ERROR monkeybusiness.training.task.reader.IntArrayDataReader [main] Exception was caused java.io.FileNotFoundException: ~\data\Array.txt (The system cannot find the path specified)
+2020-11-26 10:37:25,376 INFO  monkeybusiness.training.task.main.Main [main] Test file logging
+2020-11-26 10:37:25,382 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted

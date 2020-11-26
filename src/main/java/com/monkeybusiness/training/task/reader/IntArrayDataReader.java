@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class IntArrayDataReader {
   private static final Logger logger = LogManager.getLogger();
+  private static final String DIRECTORY_PATH = "data/";
 
   public int[] readFromConsole() {
     Scanner scanner = new Scanner(System.in);
@@ -28,7 +29,7 @@ public class IntArrayDataReader {
   }
 
   public int[] readFromFile(String fileName, int size){
-    File file = new File(fileName);
+    File file = new File(DIRECTORY_PATH + fileName);
     Scanner fileScanner = null;
     try {
       fileScanner = new Scanner(file);
