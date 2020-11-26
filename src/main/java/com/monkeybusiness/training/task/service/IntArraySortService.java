@@ -12,17 +12,16 @@ public class IntArraySortService {
   }
 
   public void gnomeSort(IntArray intArray) {
-    int[] array = intArray.getValues();
     int i = 1;
     int j = 2;
-    while (i < array.length) {
-      if (array[i - 1] <= array[i]) {
+    while (i < intArray.size()) {
+      if (intArray.get(i - 1) <= intArray.get(i)) {
         i = j;
         j++;
       } else {
-        int tmp = array[i - 1];
-        array[i - 1] = array[i];
-        array[i] = tmp;
+        int tmp = intArray.get(i - 1);
+        intArray.set(i - 1, intArray.get(i));
+        intArray.set(i, tmp);
         i--;
 
         if (i == 0) {
@@ -31,51 +30,43 @@ public class IntArraySortService {
         }
       }
     }
-
-    intArray.setValues(array);
   }
 
   public void bubbleSort(IntArray intArray) {
-    int[] array = intArray.getValues();
     boolean sorted = false;
 
     while(!sorted) {
       sorted = true;
-      for (int i = 0; i < array.length - 1; i++) {
-        if (array[i] > array[i + 1]) {
-          int temp = array[i];
-          array[i] = array[i + 1];
-          array[i + 1] = temp;
+      for (int i = 0; i < intArray.size() - 1; i++) {
+        if (intArray.get(i) > intArray.get(i + 1)) {
+          int temp = intArray.get(i);
+          intArray.set(i, intArray.get(i + 1));
+          intArray.set(i + 1, temp);
           sorted = false;
         }
       }
     }
-
-    intArray.setValues(array);
   }
 
   public void shuffle(IntArray intArray) {
     Random random = new Random();
-    int[] array = intArray.getValues();
 
-    for (int i = 0; i < array.length; i++) {
-      int randomIndex = random.nextInt(array.length);
-      int tmp = array[i];
-      array[i] = array[randomIndex];
-      array[randomIndex] = tmp;
+    int size = intArray.size();
+    for (int i = 0; i < size; i++) {
+      int randomIndex = random.nextInt(size);
+      int tmp = intArray.get(i);
+      intArray.set(i, intArray.get(randomIndex));
+      intArray.set(randomIndex, tmp);
     }
-
-    intArray.setValues(array);
   }
 
   public boolean isSortedAsc(IntArray intArray) {
     boolean sorted = true;
 
-    int[] array = intArray.getValues();
-    int i = array.length - 1;
+    int i = intArray.size() - 1;
 
     while (i > -1) {
-      if (array[i - 1] > array[i]) {
+      if (intArray.get(i - 1) > intArray.get(i)) {
         sorted = false;
         break;
       }
@@ -89,11 +80,10 @@ public class IntArraySortService {
   public boolean isSortedDesc(IntArray intArray) {
     boolean sorted = true;
 
-    int[] array = intArray.getValues();
-    int i = array.length - 1;
+    int i = intArray.size() - 1;
 
     while (i > -1) {
-      if (array[i - 1] < array[i]) {
+      if (intArray.get(i - 1) < intArray.get(i)) {
         sorted = false;
         break;
       }

@@ -1,0 +1,4 @@
+2020-11-26 09:28:10,835 INFO  monkeybusiness.training.task.main.Main [main] Test file logging
+2020-11-26 09:28:10,841 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted
+2020-11-26 09:39:28,367 INFO  monkeybusiness.training.task.main.Main [main] Test file logging
+2020-11-26 09:39:28,372 ERROR monkeybusiness.training.task.main.Main [main] Exception was caused java.lang.IllegalArgumentException: Array is not sorted

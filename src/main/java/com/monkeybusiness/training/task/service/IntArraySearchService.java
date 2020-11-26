@@ -13,14 +13,12 @@ public class IntArraySearchService {
       throw new IllegalArgumentException("Array is not sorted");
     }
 
-    int[] array = intArray.getValues();
-
     int first = 0;
-    int last = array.length - 1;
+    int last = intArray.size() - 1;
 
     while (first <= last){
       int mid = (first + last) >>> 2;
-      int midVal = array[mid];
+      int midVal = intArray.get(mid);
 
       if (midVal < value){
         first = mid + 1;
@@ -37,9 +35,10 @@ public class IntArraySearchService {
   public IntArray findAll(IntArray intArray, IntPredicate intPredicate){
     IntArray array = new IntArray();
 
-    for(int a : intArray.getValues()){
-      if (intPredicate.test(a)){
-        array.add(a);
+    for(int i = 0; i< intArray.size(); i++){
+      int value = intArray.get(i);
+      if (intPredicate.test(value)){
+        array.add(value);
       }
     }
 
@@ -68,13 +67,12 @@ public class IntArraySearchService {
   }
 
   public int findMax(IntArray intArray) {
-    int[] array = intArray.getValues();
-    int max = array[0];
+    int max = intArray.get(0);
     int i = 0;
 
-    while (i < array.length) {
-      if (max < array[i]) {
-        max = array[i];
+    while (i < intArray.size()) {
+      if (max < intArray.get(i)) {
+        max = intArray.get(i);
       }
 
       i++;
@@ -84,13 +82,12 @@ public class IntArraySearchService {
   }
 
   public int findMin(IntArray intArray) {
-    int[] array = intArray.getValues();
-    int min = array[0];
+    int min = intArray.get(0);
     int i = 0;
 
-    while (i < array.length) {
-      if (min > array[i]) {
-        min = array[i];
+    while (i < intArray.size()) {
+      if (min > intArray.get(i)) {
+        min = intArray.get(i);
       }
 
       i++;

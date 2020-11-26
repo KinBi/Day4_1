@@ -12,52 +12,44 @@ import static org.testng.Assert.assertEquals;
 public class IntArraySortServiceTest {
   IntArraySortService intArraySortService;
   IntArray intArray;
+  IntArray sortedIntArray;
 
   @BeforeMethod
   public void setUp() {
     intArraySortService = new IntArraySortService();
     int[] array = {234, 54, 235, 65, 768, 236, 4548, 345, 7, 8};
+    int[] sortedArray = Arrays.copyOf(array, array.length);
+    Arrays.sort(sortedArray);
     intArray = new IntArray(array);
+    sortedIntArray = new IntArray(sortedArray);
   }
 
   @Test(enabled = false)
   public void testMonkeySort() {
-    int[] array = intArray.getValues();
-    Arrays.sort(array);
+    IntArray expected = sortedIntArray;
 
-    IntArray expected = new IntArray(array);
-
-    IntArray intArray1 = new IntArray(intArray.getValues());
-    intArraySortService.monkeySort(intArray1);
-    IntArray actual = intArray1;
+    intArraySortService.monkeySort(intArray);
+    IntArray actual = intArray;
 
     assertEquals(actual, expected);
   }
 
   @Test
   public void testGnomeSort() {
-    int[] array = intArray.getValues();
-    Arrays.sort(array);
+    IntArray expected = sortedIntArray;
 
-    IntArray expected = new IntArray(array);
-
-    IntArray intArray1 = new IntArray(intArray.getValues());
-    intArraySortService.gnomeSort(intArray1);
-    IntArray actual = intArray1;
+    intArraySortService.gnomeSort(intArray);
+    IntArray actual = intArray;
 
     assertEquals(actual, expected);
   }
 
   @Test
   public void testBubbleSort() {
-    int[] array = intArray.getValues();
-    Arrays.sort(array);
+    IntArray expected = sortedIntArray;
 
-    IntArray expected = new IntArray(array);
-
-    IntArray intArray1 = new IntArray(intArray.getValues());
-    intArraySortService.bubbleSort(intArray1);
-    IntArray actual = intArray1;
+    intArraySortService.bubbleSort(intArray);
+    IntArray actual = intArray;
 
     assertEquals(actual, expected);
   }

@@ -41,10 +41,6 @@ public class IntArray {
     return values.length;
   }
 
-  public int[] getValues() {
-    return values;
-  }
-
   public void setValues(int[] values) {
     this.values = values;
   }
